@@ -20,19 +20,20 @@ import {
 
 const Header = () => {
   return (
-    <MDBNavbar color="default-color-dark" expand="md" dark>
-      <MDBNavbarToggler />
-      <MDBCollapse id="navbarCollapse" navbar>
-        <MDBNavbarNav left>
-          <MDBNavItem>
-            <div className="nav-link">
-              <MDBIcon fas icon="home" className="mr-1" />
-              Home
-            </div>
-          </MDBNavItem>
-        </MDBNavbarNav>
-      </MDBCollapse>
-    </MDBNavbar>
+    <h2>test</h2>
+    // <MDBNavbar color="default-color-dark" expand="md" dark>
+    //   <MDBNavbarToggler />
+    //   <MDBCollapse id="navbarCollapse" navbar>
+    //     <MDBNavbarNav left>
+    //       <MDBNavItem>
+    //         <div className="nav-link">
+    //           <MDBIcon fas icon="home" className="mr-1" />
+    //           Home
+    //         </div>
+    //       </MDBNavItem>
+    //     </MDBNavbarNav>
+    //   </MDBCollapse>
+    // </MDBNavbar>
   );
 };
 

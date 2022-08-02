@@ -1,43 +1,34 @@
 import React from "react";
 import Image from "next/image";
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardText,
-  MDBCardTitle,
-  MDBCol,
-  MDBRow,
-  MDBView,
-} from "mdbreact";
+import styles from "../styles/property_vip.module.css";
 import { priceFormatted } from "./helpers";
 
 const PropertyVip = ({ properties }) => {
   console.log(properties);
   return (
-    <>
-      <h2 className="h2-responsive font-weight-bold text-center my-4">
-        Biens Sponsorisé
-      </h2>
-      <MDBRow>
+    <section className={styles.propertyVipContainer}>
+      <h2 className={styles.propertyVipTitle}>Biens Sponsorisé</h2>
+      <div className={styles.cardsContainer}>
         {properties &&
-          properties.map((propertie) => (
-            <MDBCol key={propertie._id} className="md-4">
-              <MDBView zoom>
+          properties.map((property) => (
+            <div className={styles.sponsoContainer} key={property.title}>
+              <div className={styles.imgContainer}>
                 <img
-                  src={propertie.pictures[0]}
-                  width="100%"
-                  height="100%"
-                  alt={propertie.title}
+                  src={property.pictures[0]}
+                  alt={property.title}
+                  className={styles.img}
                 />
-              </MDBView>
-              <MDBCardBody>
-                <MDBCardTitle>{propertie.title}</MDBCardTitle>
-                <MDBCardText>{priceFormatted(propertie.price)}</MDBCardText>
-              </MDBCardBody>
-            </MDBCol>
+              </div>
+              <div className={styles.propertyInfoContainer}>
+                <h3 className={styles.propertyTitle}>{property.title}</h3>
+                <h5 className={styles.propertyPrice}>
+                  {priceFormatted(property.price)}
+                </h5>
+              </div>
+            </div>
           ))}
-      </MDBRow>
-    </>
+      </div>
+    </section>
   );
 };
 
