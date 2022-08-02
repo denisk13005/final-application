@@ -9,6 +9,7 @@ import {
   MDBRow,
   MDBView,
 } from "mdbreact";
+import { priceFormatted } from "./helpers";
 
 const PropertyVip = ({ properties }) => {
   console.log(properties);
@@ -31,7 +32,7 @@ const PropertyVip = ({ properties }) => {
               </MDBView>
               <MDBCardBody>
                 <MDBCardTitle>{propertie.title}</MDBCardTitle>
-                <MDBCardText>{propertie.price}</MDBCardText>
+                <MDBCardText>{priceFormatted(propertie.price)}</MDBCardText>
               </MDBCardBody>
             </MDBCol>
           ))}

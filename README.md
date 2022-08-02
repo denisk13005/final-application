@@ -14,3 +14,6 @@ On crée ensuite le composant Layout pour englober notre app avec
 
 Le footer
 
+# Récupération des biens sponsorisés avec getStaticProps sur https://aqueous-meadow-07678.herokuapp.com/api/properties/vip
+
+On récupére la liste des biens sponsorisés et on la rend dans le composant propertyVip grace a mdbReact, on crée une fonction de formatage de prix dans helpers.js pour mettre en forme le prix
