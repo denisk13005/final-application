@@ -11,3 +11,6 @@ allez sur npms pour importer les styles de mdbreact et les coller dans \_app.js,
 On crée le composant header grâce a mdbreact <a>https://mdbootstrap.com/docs/react/</a>
 
 On crée ensuite le composant Layout pour englober notre app avec
+
+Le footer
+
